@@ -27,9 +27,9 @@
 </head>
 
 <body>
-	<div id="selectModel">
-    <select name="models" id="models" class="models">
-    </select>
+	<div id="selectModel" style="top:20em;z-index:1;position:absolute;">
+		<select name="models" id="models" class="models">
+		</select>
   </div>
 	<div id="3dhop" class="tdhop" onmousedown="if (event.preventDefault) event.preventDefault()">
 		<div id="tdhlg"></div>
