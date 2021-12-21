@@ -49,7 +49,7 @@
 </body>
 
 <script type="text/javascript">
-	var presenter = null;
+	const presenter = new Presenter("draw-canvas");
   var models = [];
   var loadModel;
 	
@@ -89,21 +89,21 @@
   }
 
   $( ".models" ).change(function() {
+		presenter.toggleInstanceVisibilityByName('Model', true);
     loadModel = $("#models option:selected").text();
     setup3dhop();
   });
 
 	function setup3dhop() {
-		presenter = new Presenter("draw-canvas");
     console.log(loadModel)
 
 		presenter.setScene({
 			meshes: {
-				"Gargoyle": { url: "models/" + loadModel }
+				"Monument": { url: "models/" + loadModel }
 			},
 			modelInstances: {
-				"Model2": {
-					mesh: "Gargoyle"
+				"Model": {
+					mesh: "Monument"
 				}
 			}
 		});
