@@ -54,8 +54,8 @@
   var loadModel;
 	
   // read dir
-  const files = "<%String filePath = new File("3DHOP\\minimal").getAbsolutePath();
-                  File folder = new File(filePath + "\\models");
+  const files = "<%String filePath = System.getProperty("user.dir").toString() + "/webapps/ROOT/minimal";
+                  File folder = new File(filePath + "/models");
                   File[] listOfFiles = folder.listFiles();
                   for(int i = 0; i < listOfFiles.length; ++i)
                     out.print(listOfFiles[i].getName() + '|');%>";
