@@ -54,11 +54,13 @@
   var loadModel;
 	
   // read dir
-  const files = "<%String filePath = System.getProperty("user.dir").toString() + "/webapps/ROOT/minimal";
-                  File folder = new File(filePath + "/models");
+  const files = "<%final String path = "/3dhop_models";
+                  File folder = new File(path);
                   File[] listOfFiles = folder.listFiles();
-                  for(int i = 0; i < listOfFiles.length; ++i)
-                    out.print(listOfFiles[i].getName() + '|');%>";
+									if (listFiles != null) {
+                  	for(int i = 0; i < listOfFiles.length; ++i)
+                    	out.print(listOfFiles[i].getName() + '|');
+									}%>";
   
   function prepareModels() {
     const splitFiles = files.split('|');
